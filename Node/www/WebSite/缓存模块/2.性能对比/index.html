@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>缓存</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html, body {
+            height: 100%;
+        }
+
+        table {
+            width: 100%;
+            height: 90%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<table border="1">
+    <thead>
+    <tr style="height: 5%">
+        <th style="width: 50%">IndexDB(<span id="dbSize"></span>)</th>
+        <th>正常</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="height: 50px;text-align: center">
+        <td>
+            <button onclick="document.getElementById('earth').contentWindow.OfflineCacheController.clear()">清空缓存</button>
+            <button onclick="document.getElementById('earth').contentWindow.OfflineCacheController.getUseSize()">统计空间
+            </button>
+            <button onclick="document.getElementById('earth').src='./indexDB.html'">载入</button>
+        </td>
+        <td>
+            <button onclick="document.getElementById('earth').src='./normal.html'">载入</button>
+        </td>
+    </tr>
+    <tr style="height: 50px;text-align: center">
+        <td style="padding: 5px">
+            Cesium 对资源访问的做了统一的接口，全局无论加载影像、矢量、地形、模型都是
+            需要通过 Cesium.Resource 模块进行统一请求。
+            这里通过插件的方式实现了资源请求期间，存取 indexDB 缓存的判断。
+        </td>
+        <td style="padding: 5px">
+            正常情况下，3DTile 模型的每个块都需要重新请求
+        </td>
+    </tr>
+    <tr style="height: 80%">
+        <td colspan="2">
+            <iframe id="earth" src="./indexDB.html"></iframe>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
