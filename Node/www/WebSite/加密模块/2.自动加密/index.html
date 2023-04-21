@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../static/lib/Cesium/^1.104/Cesium.js"></script>
+    <link rel="stylesheet" href="../../static/lib/Cesium/^1.104/Widgets/widgets.css">
+    <script src="../../static/lib/localforage/localforage.min.js"></script>
+    <script src="../../../CesiumNetworkPlug/dist/CesiumNetworkPlug.min.js"></script>
+    <link rel="stylesheet" href="../../static/css/main.css">
+</head>
+<body>
+<div class="description">
+    本实例演示 Cesium 的网络请求插件的使用，可对请求的数据进行加密解密。
+</div>
+<div class="description">
+    可加密包括：图层瓦片、地形、3DTiles、矢量 等所有通过 Cesium 发起的网络请求的静态资源。
+</div>
+
+<hr>
+<div id="MapContainer"></div>
+<div class="description">
+    可按下 F12 打开 控制台=>网络请求 ,查看数据数据传输过程中的加密格式
+</div>
+<div class="description">
+    png、jpg、json、i3dn、.terrain、gltf 等所有静态资源文件在网络传输过程中都已经加密为二进制数据包
+</div>
+<script type="module" src="./index.js"></script>
+</body>
+</html>

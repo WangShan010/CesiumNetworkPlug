@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web端</title>
+    <script src="../../static/lib/axios/^0.26.1/axios.min.js"></script>
+    <script src="../../../CesiumNetworkPlug/dist/CesiumNetworkPlug.min.js"></script>
+    <link rel="stylesheet" href="../../static/css/main.css">
+</head>
+<body>
+<div id="app">
+    <div>
+        <h3 style="color: #66c03b">UI 渲染线程：当前时间戳为 <span id="time"></span></h3>
+    </div>
+    <div>
+        <button onclick="loadText()">载入文本</button>
+        <button onclick="loadJson()">载入Json</button>
+        <button onclick="loadJpg()">载入图片</button>
+    </div>
+    <hr>
+    <div class="description">
+        <img id="img" width="500">
+    </div>
+    <div class="description">
+        <textarea id="txtDom" style="width: 600px;display: none" rows="20"></textarea>
+    </div>
+    <div class="description">
+        <p>可按下 F12 打开 控制台=>网络请求 ,查看数据数据传输过程中的加密格式</p>
+    </div>
+</div>
+<script type="module" src="./index.js"></script>
+</body>
+</html>
