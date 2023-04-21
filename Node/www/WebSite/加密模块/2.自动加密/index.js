@@ -10,13 +10,13 @@ window.viewer = new Cesium.Viewer("MapContainer", {
     animation: false,
     // 加载本地影像
     imageryProvider: new Cesium.UrlTemplateImageryProvider({
-        url: `${host}/encryptData/MapBox-Tile/{z}/{x}/{y}.jpeg`,
+        url: `${host}/encryptData/GISData/MapBox-Tile/{z}/{x}/{y}.jpeg`,
         tilingScheme: new Cesium.WebMercatorTilingScheme(),
         maximumLevel: 5
     }),
     // 加载本地地形
     terrainProvider: new Cesium.CesiumTerrainProvider({
-        url: `${host}/encryptData/assets.cesium.com/1/`,
+        url: `${host}/encryptData/GISData/assets.cesium.com/1/`,
         requestVertexNormals: false,
         requestWaterMask: false,
         credit: void 0
@@ -27,7 +27,7 @@ window.viewer = new Cesium.Viewer("MapContainer", {
 // 加载本地大雁塔 3DTiles 模型
 viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
     position: Cesium.Cartesian3.fromDegrees(120, 30, 500),
-    url: `${host}/encryptData/3DTiles-DaYanTa/tileset.json`
+    url: `${host}/encryptData/GISData/3DTiles-DaYanTa/tileset.json`
 }))
     .readyPromise.then(function (tileSet) {
 

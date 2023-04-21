@@ -41,9 +41,11 @@
 
 ### 1、链接地址
 
-- <a>插件下载：</a>
-
-- <a>Demo下载：https://fanyi.baidu.com/#zh/en/%E6%A3%80%E9%AA%8C</a>
+- 在线体验：http://101.43.223.126:5000/
+- 插件下载
+  - 完整包：http://101.43.223.126:5000/CesiumNetworkPlug/dist/CesiumNetworkPlug.min.js
+  - 加解密函数库：http://101.43.223.126:5000/CesiumNetworkPlug/dist/CryptoUtil.min.js
+- 离线 Demo下载：http://101.43.223.126:5000/Release.rar
 
 
 
