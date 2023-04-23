@@ -1,3 +1,3 @@
-const CryptoUtil = require("../lib/CesiumNetworkPlug/dist/CryptoUtil.min.js");
+const CryptoUtil = require("../www/CesiumNetworkPlug/dist/CryptoUtil.min.js");
 
 console.log(CryptoUtil);

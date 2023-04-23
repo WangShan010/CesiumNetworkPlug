@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const {CryptoUtil} = require("../lib/CesiumNetworkPlug/dist/CesiumNetworkPlug.min.js");
+const {CryptoUtil} = require("../www/CesiumNetworkPlug/dist/CesiumNetworkPlug.min.js");
 
 async function demo2() {
     const fileName = "浙江省.geojson";
