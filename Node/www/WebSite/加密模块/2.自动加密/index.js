@@ -1,22 +1,21 @@
 // const host = "http://localhost:5000/encryptData";
+const host = "http://101.43.223.126:5000/encryptData";
 
-const host = "http://101.43.223.126:5000";
-
-CesiumNetworkPlug.OfflineCacheController.ruleList.add(`${host}/encryptData`);
-CesiumNetworkPlug.DecryptionController.ruleMap.set(`${host}/encryptData`, "@mtJQGyEEq6DBK.hxVR*3fTGgXssxCfMtZQEyUTF");
+CesiumNetworkPlug.OfflineCacheController.ruleList.add(`${host}`);
+CesiumNetworkPlug.DecryptionController.ruleMap.set(`${host}`, "@mtJQGyEEq6DBK.hxVR*3fTGgXssxCfMtZQEyUTF");
 
 window.viewer = new Cesium.Viewer("MapContainer", {
     timeline: false,
     animation: false,
     // 加载本地影像
     imageryProvider: new Cesium.UrlTemplateImageryProvider({
-        url: `${host}/encryptData/GISData/MapBox-Tile/{z}/{x}/{y}.jpeg`,
+        url: `${host}/GISData/MapBox-Tile/{z}/{x}/{y}.jpeg`,
         tilingScheme: new Cesium.WebMercatorTilingScheme(),
         maximumLevel: 5
     }),
     // 加载本地地形
     terrainProvider: new Cesium.CesiumTerrainProvider({
-        url: `${host}/encryptData/GISData/assets.cesium.com/1/`,
+        url: `${host}/GISData/assets.cesium.com/1`,
         requestVertexNormals: false,
         requestWaterMask: false,
         credit: void 0
@@ -27,7 +26,7 @@ window.viewer = new Cesium.Viewer("MapContainer", {
 // 加载本地大雁塔 3DTiles 模型
 viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
     position: Cesium.Cartesian3.fromDegrees(120, 30, 500),
-    url: `${host}/encryptData/GISData/3DTiles-DaYanTa/tileset.json`
+    url: `${host}/GISData/3DTiles-DaYanTa/tileset.json`
 }))
     .readyPromise.then(function (tileSet) {
 
