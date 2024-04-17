@@ -20,7 +20,7 @@ viewer.scene.camera.setView({
     }
 });
 
-setTimeout(() => {
-    let tileSet = Cesium.createOsmBuildings();
+setTimeout(async () => {
+    let tileSet =  await Cesium.createOsmBuildingsAsync();
     viewer.scene.primitives.add(tileSet);
 }, 3000);
